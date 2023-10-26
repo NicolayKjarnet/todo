@@ -8,12 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @Environment(\.managedObjectContext) var moc
+    
+    let printIt = ("\(TodoTask.demoTasks[2].note)")
+    
     var body: some View {
+        
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, Øystein!")
+            Text(printIt)
+            
         }
         .padding()
     }
