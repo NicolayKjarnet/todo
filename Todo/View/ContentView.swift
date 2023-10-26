@@ -11,19 +11,22 @@ struct ContentView: View {
     
     @Environment(\.managedObjectContext) var moc
     
-    let printIt = ("\(TodoTask.demoTasks[0].note)")
+    @State var todos = TodoTask.demoTasks
     
     var body: some View {
         
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, Øystein!")
-            Text(printIt)
-            
+        VStack{
+            ForEach(todos) { todo in
+                
+                Text(todo.title)
+                
+                if let note = todo.note {
+                    Text(note)
+                }
+                    
+            }
         }
-        .padding()
+        
     }
 }
 

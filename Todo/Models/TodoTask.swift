@@ -27,9 +27,9 @@ struct TodoTask: Identifiable {
 extension TodoTask {
     
     static let demoTasks = [
-        TodoTask.init(title: "Hente barn", done: true),
+        TodoTask.init(title: "Hente barn"),
         TodoTask.init(title: "Kjøpe melk (til barn)", note: "Daniel er jÆVLIG tørst, kjøp MER ENN NOK!!"),
-        TodoTask.init(title: "Vanne blomster")
+        TodoTask.init(title: "Vanne blomster", note: "Daniel er jÆVLIG tørst, kjøp MER ENN NOK!!")
     ]
     
 }

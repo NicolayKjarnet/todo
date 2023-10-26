@@ -17,7 +17,7 @@
 		68B9FEE62AEAD24C00D89559 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 68B9FEE42AEAD24C00D89559 /* Model.xcdatamodeld */; };
 		68B9FEE92AEAD3EC00D89559 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B9FEE82AEAD3EC00D89559 /* DataController.swift */; };
 		68B9FEED2AEAE14D00D89559 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B9FEEC2AEAE14D00D89559 /* AddTaskView.swift */; };
-		68B9FEEF2AEAE28000D89559 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B9FEEE2AEAE28000D89559 /* Task.swift */; };
+		68B9FEEF2AEAE28000D89559 /* TodoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B9FEEE2AEAE28000D89559 /* TodoTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,7 @@
 		68B9FEE52AEAD24C00D89559 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		68B9FEE82AEAD3EC00D89559 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		68B9FEEC2AEAE14D00D89559 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
-		68B9FEEE2AEAE28000D89559 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		68B9FEEE2AEAE28000D89559 /* TodoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				68B9FEE42AEAD24C00D89559 /* Model.xcdatamodeld */,
-				68B9FEEE2AEAE28000D89559 /* Task.swift */,
+				68B9FEEE2AEAE28000D89559 /* TodoTask.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,7 +289,7 @@
 				68B9FEED2AEAE14D00D89559 /* AddTaskView.swift in Sources */,
 				68B9FEE92AEAD3EC00D89559 /* DataController.swift in Sources */,
 				684BBCD62AE92A640029E84F /* TodoApp.swift in Sources */,
-				68B9FEEF2AEAE28000D89559 /* Task.swift in Sources */,
+				68B9FEEF2AEAE28000D89559 /* TodoTask.swift in Sources */,
 				68B9FEE62AEAD24C00D89559 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
