@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @Environment(\.managedObjectContext) var moc
     
-    let printIt = ("\(TodoTask.demoTasks[2].note)")
+    let printIt = ("\(TodoTask.demoTasks[0].note)")
     
     var body: some View {
         
