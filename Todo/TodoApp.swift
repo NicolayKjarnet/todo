@@ -16,7 +16,7 @@ struct TodoApp: App {
     
     @Environment(\.managedObjectContext) var moc
     
-    @State var todoTasks = [TodoTask.demoTasks]
+    @State var todoTasks = TodoTask.demoTasks
     
     var body: some Scene {
         WindowGroup {
