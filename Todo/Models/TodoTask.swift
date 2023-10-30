@@ -15,12 +15,13 @@ struct TodoTask: Identifiable {
     let note: String?
     let done: Bool
     
-    // Spørre Håkon om det er mulig med to konstruktører med forskjellig signatur (to initer)
+    
     init(title: String, note: String? = nil, done: Bool = false){
         self.title = title
         self.note = note
         self.done = done
-    }
+    }    
+    
     
 }
 
@@ -28,8 +29,8 @@ extension TodoTask {
     
     static let demoTasks = [
         TodoTask.init(title: "Hente barn"),
-        TodoTask.init(title: "Kjøpe melk (til barn)", note: "Daniel er jÆVLIG tørst, kjøp MER ENN NOK!!"),
-        TodoTask.init(title: "Vanne blomster", note: "Daniel er jÆVLIG tørst, kjøp MER ENN NOK!!")
+        TodoTask.init(title: "Kjøpe melk", note: "I butikken"),
+        TodoTask.init(title: "Vanne blomster", note: "hjemme")
     ]
     
 }

@@ -15,8 +15,33 @@ struct AddTaskView: View {
     // 3. Kategorier (enum?)
     // 4. Modellklasse for objektene inne i programmet
     
+    @Environment(\.presentationMode) var presentationMode
+    
+    @State var title = ""
+    @State var notes = ""
+
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            
+            Section("Opprett todo note") {
+                TextField("Title", text: $title)
+                TextField("notes", text: $notes)
+            }
+            
+            Section {
+                Button("Lagre") {
+                    presentationMode.wrappedValue.dismiss()
+                    self.selectedTab
+                }
+            }
+            //        }.alert(isPresented: $isShowingError) {
+            //            Alert(title:
+            //                    Text("Manglende felter: "),
+            //                  message: Text("\(validationErrors.text)"))
+            //        }
+            //        .padding(.top)
+        }
     }
     
 }

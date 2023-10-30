@@ -13,15 +13,18 @@ struct TodoApp: App {
     
     // dataController holder i staten til init-metoden inne i DataController
     @StateObject var dataController = DataController()
+    @State var isPresented = false
     
     @Environment(\.managedObjectContext) var moc
     
     @State var todoTasks = TodoTask.demoTasks
     
+    @State private var selectedTab = 0
+    
     var body: some Scene {
         WindowGroup {
             
-            TabView{
+            TabView(selection: $selectedTab){
                 // Her kunne vi sendt inn dataController i parameteret og fått informasjon rett inn i
                 // ContentView, men siden vi ønsker dataen på tvers av alle views...
                 ContentView()
@@ -29,7 +32,7 @@ struct TodoApp: App {
                         Label("Todos", systemImage: "checklist")
                     }.badge(todoTasks.count)
                 
-                Text("Add")
+                AddTaskView()
                     .tabItem {
                         Label("Add", systemImage: "plus.app")
                     }
