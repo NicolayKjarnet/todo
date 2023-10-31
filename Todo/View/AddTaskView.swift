@@ -24,7 +24,9 @@ struct AddTaskView: View {
     @State var notes = ""
     
     @Environment(\.managedObjectContext) var moc
-    @State var todos = TodoTask.demoTasks
+//    @State var todos = TodoTask.demoTasks
+    
+    var addNewTaskClosure: ( (TodoTask) -> () )
     
     var body: some View {
         Form {
@@ -36,7 +38,10 @@ struct AddTaskView: View {
             
             Section {
                 Button("Lagre") {
-                    didTapSaveButton()
+                    let newTask: TodoTask = TodoTask.init(title: title, note: notes)
+                    
+                    addNewTaskClosure(newTask)
+//                    didTapSaveButton()
                 }
             }
         }
@@ -65,5 +70,5 @@ struct AddTaskView: View {
 
 
 #Preview {
-    AddTaskView()
+    AddTaskView(){_ in}
 }

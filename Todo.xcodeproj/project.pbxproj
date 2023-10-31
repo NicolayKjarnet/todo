@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		179206622AF13EFA006B298A /* CusomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179206612AF13EFA006B298A /* CusomView.swift */; };
+		179206642AF13F2F006B298A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179206632AF13F2F006B298A /* SettingsView.swift */; };
 		684BBCD62AE92A640029E84F /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684BBCD52AE92A640029E84F /* TodoApp.swift */; };
 		684BBCD82AE92A640029E84F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684BBCD72AE92A640029E84F /* ContentView.swift */; };
 		684BBCDA2AE92A660029E84F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 684BBCD92AE92A660029E84F /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		179206612AF13EFA006B298A /* CusomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CusomView.swift; sourceTree = "<group>"; };
+		179206632AF13F2F006B298A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		684BBCD22AE92A640029E84F /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		684BBCD52AE92A640029E84F /* TodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoApp.swift; sourceTree = "<group>"; };
 		684BBCD72AE92A640029E84F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 			children = (
 				684BBCD72AE92A640029E84F /* ContentView.swift */,
 				68B9FEEC2AEAE14D00D89559 /* AddTaskView.swift */,
+				179206612AF13EFA006B298A /* CusomView.swift */,
+				179206632AF13F2F006B298A /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				684BBCD82AE92A640029E84F /* ContentView.swift in Sources */,
+				179206642AF13F2F006B298A /* SettingsView.swift in Sources */,
+				179206622AF13EFA006B298A /* CusomView.swift in Sources */,
 				68B9FEED2AEAE14D00D89559 /* AddTaskView.swift in Sources */,
 				68B9FEE92AEAD3EC00D89559 /* DataController.swift in Sources */,
 				684BBCD62AE92A640029E84F /* TodoApp.swift in Sources */,
