@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct AddTaskView: View {
     
@@ -14,12 +15,16 @@ struct AddTaskView: View {
     // 2. Enum
     // 3. Kategorier (enum?)
     // 4. Modellklasse for objektene inne i programmet
+    // Spørre Håkon om det er lurt å gå tilbake til eldre versjon av Xcode før eksamen (vise han #Preview som eksempel)
+    // 6. Error handling og input-validering (se på Håkons kode i AddStoreView)
     
     @Environment(\.presentationMode) var presentationMode
     
     @State var title = ""
     @State var notes = ""
-
+    
+    @Environment(\.managedObjectContext) var moc
+    @State var todos = TodoTask.demoTasks
     
     var body: some View {
         Form {
@@ -31,20 +36,33 @@ struct AddTaskView: View {
             
             Section {
                 Button("Lagre") {
-                    presentationMode.wrappedValue.dismiss()
-                    self.selectedTab
+                    didTapSaveButton()
                 }
             }
-            //        }.alert(isPresented: $isShowingError) {
-            //            Alert(title:
-            //                    Text("Manglende felter: "),
-            //                  message: Text("\(validationErrors.text)"))
-            //        }
-            //        .padding(.top)
         }
     }
     
+    func didTapSaveButton(){
+        
+        do {
+            
+            let entityDescription = try NSEntityDescription.entity(forEntityName: "Task", in: moc)!
+            
+            let todoTask = Task(entity: entityDescription, insertInto: moc)
+            
+            todoTask.title = title
+            todoTask.notes = notes
+            todoTask.done = false
+            
+            try moc.save()
+            
+        } catch let error {
+            print(error)
+        }
+        
+    }
 }
+
 
 #Preview {
     AddTaskView()
