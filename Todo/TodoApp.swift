@@ -32,12 +32,14 @@ struct TodoApp: App {
                         Label("Todos", systemImage: "checklist")
                     }.badge(todoTasks.count)
                 
-                AddTaskView()
+                AddTaskView(){newTask in
+                    todoTasks.append(newTask)
+                }
                     .tabItem {
                         Label("Add", systemImage: "plus.app")
                     }
                 
-                Text("Settings")
+                SettingsView()
                     .tabItem {
                         Label("Settings", systemImage: "gearshape")
                     }
